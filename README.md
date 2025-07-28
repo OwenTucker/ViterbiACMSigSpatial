@@ -8,6 +8,8 @@ Before running anything please make sure you have libraries installed under requ
 
 Data
 
+![Linear Interpolation](images/interpolation_baseline_2.png)
+
 -----------------------------------------------------------------------------------
 
 - la_cbg.csv: the transition matrix for CBG level imputation
