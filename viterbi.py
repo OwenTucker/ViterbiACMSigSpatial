@@ -265,6 +265,7 @@ def viterbi(vpath, counties, county_index, transition_matrix, emission_probs, co
     log_unobserved_emission = np.log(1 - emission_probs + 1e-10)  # Add small epsilon to avoid log(0)
     log_transition_matrix = np.log(transition_matrix + 1e-10)
    
+    print(type(transition_matrix))
     log_probs = np.full((n_unobserved, n_counties), -np.inf)
     path_tracking = np.zeros((n_unobserved, n_counties), dtype=int)
     
