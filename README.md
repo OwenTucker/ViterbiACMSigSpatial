@@ -19,7 +19,7 @@ Data
 - for shape files, paper_data/map/map contains shape files for both CBG and county level. 
 
 ***NOTE*** 
-Outdated data between CBG level shape file and simulation CBG dataset will inevitably cause exceptions to be thrown. 
+Outdated data between CBG level shape file and simulation CBG dataset will inevitably cause exceptions to be thrown. Warnings will pop up on every calculation, this is due to the 2D projection.
 CBG level emission matrix is not available, it uses us_county....probs but will remain constant accross all CBGs. 
 
 -----------------------------------------------------------------------------------
@@ -32,6 +32,7 @@ Code
 - constant.py: Constant interpolation, must follow specific format specified in file, imputes root of branch to all child nodes. 
 - viterbi.py: Runs both viterbi and linear interpolation on dataset. Set random flag to impute random interpolation.
 - viterbi_sim.py: Runs both viterbi and linear interpolation on dataset. Set random flag to impute random interpolation.
+  - The transition matrix is hardcoded for the simulation, previously due to size but now for convenience. 
 
 ***NOTE*** 
 For viterbi and viterbi_sim, setting random flag will not run viterbi or linear interpolation. 
